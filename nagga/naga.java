@@ -12,11 +12,12 @@ public class naga extends Actor
      * Act - do whatever the naga wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    World w;
     public void act() 
     {
+        w = getWorld();
         checkKeyPress();
-        
-
+        shooter();
     }
 
     /**
@@ -45,4 +46,12 @@ public class naga extends Actor
 
     }
   
+    public void shooter()
+    {
+        World w = getWorld();
+        if(Greenfoot.isKeyDown("space"))
+        {
+            w.addObject(new api(), getX()+85, getY());
+        }
+    }
 }
