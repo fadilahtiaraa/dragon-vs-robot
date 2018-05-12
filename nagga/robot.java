@@ -21,7 +21,6 @@ public class robot extends Actor
         if(isAtEdge())
         {
             w.removeObject(this);
-            
         }
     }    
 }
