@@ -14,6 +14,7 @@ class.robot.superclass=greenfoot.Actor
 dependency1.from=mulai
 dependency1.to=MyWorld
 dependency1.type=UsesDependency
+<<<<<<< HEAD
 dependency2.from=menu
 dependency2.to=mulai
 dependency2.type=UsesDependency
@@ -33,11 +34,39 @@ editor.fx.0.height=0
 editor.fx.0.width=0
 editor.fx.0.x=0
 editor.fx.0.y=0
+=======
+dependency2.from=api
+dependency2.to=robot
+dependency2.type=UsesDependency
+dependency3.from=menu
+dependency3.to=mulai
+dependency3.type=UsesDependency
+dependency4.from=MyWorld
+dependency4.to=robot
+dependency4.type=UsesDependency
+dependency5.from=MyWorld
+dependency5.to=naga
+dependency5.type=UsesDependency
+dependency6.from=MyWorld
+dependency6.to=api
+dependency6.type=UsesDependency
+dependency7.from=naga
+dependency7.to=api
+dependency7.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=275
+editor.fx.0.y=-4
+>>>>>>> ef4183128fc469c7f45957cb59df0f7da8fbcb48
 mainWindow.height=600
 mainWindow.width=850
 mainWindow.x=40
 mainWindow.y=40
+<<<<<<< HEAD
 package.numDependencies=6
+=======
+package.numDependencies=7
+>>>>>>> ef4183128fc469c7f45957cb59df0f7da8fbcb48
 package.numTargets=6
 project.charset=UTF-8
 readme.height=58
