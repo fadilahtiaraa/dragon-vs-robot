@@ -20,8 +20,8 @@ public class robot extends Actor
         move(-5);
         if(isAtEdge())
         {
-            w.removeObject(this);
-            
+            //w.removeObject(this);
+            setLocation(590,getY());
         }
     }    
 }

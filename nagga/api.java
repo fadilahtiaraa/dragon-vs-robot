@@ -21,5 +21,8 @@ public class api extends Actor
         {
             w.removeObject(this);
         }
+        else
+            if(isTouching(robot.class))
+                removeTouching(robot.class);
     }
 }    
