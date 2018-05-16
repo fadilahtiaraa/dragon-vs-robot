@@ -18,6 +18,11 @@ public class naga extends Actor
         w = getWorld();
         checkKeyPress();
         shooter();
+        if (checkHit()){
+            MyWorld MyWorld = (MyWorld) getWorld();
+        }
+        else{
+        }
     }
 
     /**
