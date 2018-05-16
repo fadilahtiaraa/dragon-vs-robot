@@ -8,4 +8,6 @@ comment2.target=void\ checkKeyPress()
 comment2.text=\r\n\ Check\ whether\ a\ keyboard\ key\ has\ been\ pressed\ and\ react\ if\ it\ has.\r\n
 comment3.params=
 comment3.target=void\ shooter()
-numComments=4
+comment4.params=
+comment4.target=boolean\ checkHit()
+numComments=5

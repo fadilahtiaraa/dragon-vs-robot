@@ -59,4 +59,14 @@ public class naga extends Actor
             w.addObject(new api(), getX()+85, getY());
         }
     }
+    
+    private boolean checkHit(){
+        if (isTouching(robot.class)){
+            return true;
+        }
+        if (getY() == getWorld().getHeight() - 1){
+            return true;
+        }
+        return false;
+    }
 }
