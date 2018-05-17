@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class naga extends Actor
 {
+    private int jeda=0;
     /**
      * Act - do whatever the naga wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -55,9 +56,9 @@ public class naga extends Actor
     {
         World w = getWorld();
         if(Greenfoot.isKeyDown("space"))
-        {
-            w.addObject(new api(), getX()+85, getY());
-        }
+        if(jeda>0)jeda--;
+        if(jeda==0)getWorld().addObject(new api(),getX()+100,getY());
+        if(jeda==1)jeda=10;
     }
     
     private boolean checkHit(){
