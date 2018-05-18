@@ -57,11 +57,8 @@ public class naga extends Actor
         World w = getWorld();
         if(Greenfoot.isKeyDown("space"))
         if(jeda>0)jeda--;
-        if(jeda==0)getWorld().addObject(new api(),getX()+100,getY());
-        if(jeda==1)jeda=10;
-        
-        
-        
+        if(jeda==1)getWorld().addObject(new api(),getX()+100,getY());
+        if(jeda==0)jeda=10;
     }
     
     private boolean checkHit(){
