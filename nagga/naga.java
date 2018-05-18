@@ -59,6 +59,9 @@ public class naga extends Actor
         if(jeda>0)jeda--;
         if(jeda==0)getWorld().addObject(new api(),getX()+100,getY());
         if(jeda==1)jeda=10;
+        
+        
+        
     }
     
     private boolean checkHit(){
