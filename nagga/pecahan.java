@@ -22,10 +22,9 @@ public class pecahan extends Actor
     
     public void addedToWorld(World MyWorld)
     {
-        
+        vx=-5+Greenfoot.getRandomNumber(10);
+        vy=-5+Greenfoot.getRandomNumber(10);
+        if(vx==0)vx=1;
+        if(vy==0)vy=1;
     }
-    public void act() 
-    {
-        // Add your action code here.
-    }    
 }

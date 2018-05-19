@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends World
 {
-
+    private int jeda=0;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -20,6 +20,15 @@ public class MyWorld extends World
         prepare();
     }
 
+    public void act()
+    {
+        if(jeda>0)jeda--;
+        else jeda=20;
+        if(jeda==1){
+            int py=Greenfoot.getRandomNumber(getHeight());
+            addObject(new robot(),getWidth()+200,py);
+        }
+    }
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
