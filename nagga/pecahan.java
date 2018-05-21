@@ -12,7 +12,7 @@ public class pecahan extends Actor
      * Act - do whatever the pecahan wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public int vx=0,vy=0;
+    public int vx=0,vy=0,rot=0;
     public pecahan(GreenfootImage img)
     {
         GreenfootImage image=new GreenfootImage(10,10);
@@ -24,7 +24,17 @@ public class pecahan extends Actor
     {
         vx=-5+Greenfoot.getRandomNumber(10);
         vy=-5+Greenfoot.getRandomNumber(10);
+        rot=-10+Greenfoot.getRandomNumber(20);
         if(vx==0)vx=1;
         if(vy==0)vy=1;
+    }
+    
+    public void act()
+    {
+        setLocation(getX()+vx,getY()+vy);
+        setRotation(getRotation()+rot);
+        if(getX()<-200 || getY()<-200 || getX()>getWorld().getWidth()+200 || getY()>getWorld().getHeight()+200){
+            getWorld().removeObject(this);
+        }
     }
 }
