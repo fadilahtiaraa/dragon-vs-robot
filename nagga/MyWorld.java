@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld extends World
 {
     private int jeda=0;
+    private int score;
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -18,6 +19,8 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         prepare();
+        score = 0;
+        showScore();
     }
 
     public void act()
@@ -27,6 +30,33 @@ public class MyWorld extends World
         if(jeda==1){
             int py=Greenfoot.getRandomNumber(getHeight());
             addObject(new robot(),getWidth()+200,py);
+        }
+        if(Greenfoot.getRandomNumber(100) < 3)
+        {
+            addObject(new poin(),779, Greenfoot.getRandomNumber(360));
+        }
+        if(Greenfoot.getRandomNumber(100)<6)
+        {
+            addObject(new poin(),779, Greenfoot.getRandomNumber(360));
+        }
+    }
+    
+    private void showScore()
+    {
+        showText("Score:" + score, 80, 25);
+    }
+    private void showEndMessage()
+    {
+        showText("your final score"+ score + "point", 390, 170);
+    }
+    public void addScore(int points)
+    {
+        score = score + points;
+        showScore();
+        if(score < 0)
+        {
+            Greenfoot.stop();
+            
         }
     }
     /**

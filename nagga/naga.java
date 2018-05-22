@@ -16,19 +16,18 @@ public class naga extends Actor
     World w;
     public void act() 
     {
+        // Add your action code here.
         w = getWorld();
         checkKeyPress();
         shooter();
+        checkCollision();
         if (checkHit()){
             MyWorld MyWorld = (MyWorld) getWorld();
         }
         else{
         }
     }
-
-    /**
-     * Check whether a keyboard key has been pressed and react if it has.
-     */
+    
     private void checkKeyPress()
     {
         if (Greenfoot.isKeyDown("up")) 
@@ -45,7 +44,7 @@ public class naga extends Actor
             setLocation(getX()-4, getY());
         }
 
-        if (Greenfoot.isKeyDown("right")) 
+        if (Greenfoot.isKeyDown("right"))
         {
             setLocation(getX()+4, getY());
         }
@@ -61,6 +60,14 @@ public class naga extends Actor
         if(jeda==0)jeda=10;
     }
     
+    private void checkCollision()
+    { if (isTouching(poin.class))
+        {
+            MyWorld MyWorld = (MyWorld)getWorld();
+            MyWorld.addScore(20);
+            removeTouching(poin.class);
+        }
+    }
     private boolean checkHit(){
         if (isTouching(robot.class)){
             return true;
